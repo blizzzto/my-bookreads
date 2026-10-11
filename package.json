@@ -1,0 +1,9 @@
+{
+  "name": "reading-quest",
+  "private": true,
+  "scripts": {
+    "setup": "npm install --prefix server && npm install --prefix client",
+    "build": "npm run build --prefix client",
+    "start": "npm run build && npm start --prefix server"
+  }
+}

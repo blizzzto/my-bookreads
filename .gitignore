@@ -1,0 +1,5 @@
+node_modules/
+.env
+# your personal reading data and the built site are made on each computer, not stored in git
+server/data.json
+client/dist/

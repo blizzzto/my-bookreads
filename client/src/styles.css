@@ -1,0 +1,39 @@
+:root{--bg:#14121f;--card:#1f1b33;--ink:#eee9ff;--mute:#9a93c0;--acc:#f5b942;--acc2:#7c5cff;--ok:#4ade80}
+*{box-sizing:border-box}
+body{margin:0;font-family:Georgia,serif;background:var(--bg);color:var(--ink);line-height:1.5}
+header{padding:20px;text-align:center}
+h1{margin:0;color:var(--acc)}
+nav{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;padding:0 10px 14px}
+button,input,select,textarea{font:inherit}
+button{background:var(--acc2);color:#fff;border:0;border-radius:8px;padding:8px 14px;cursor:pointer}
+button.alt{background:#352f58}button.ok{background:var(--ok);color:#000}button.bad{background:#b3364a}button.on{background:var(--acc);color:#000}
+main{max-width:900px;margin:auto;padding:0 14px 60px}
+.card{background:var(--card);border-radius:12px;padding:16px;margin-bottom:14px}
+input,select,textarea{width:100%;background:#2a2547;color:var(--ink);border:1px solid #3d3766;border-radius:8px;padding:8px;margin:4px 0 10px}
+.row{display:flex;gap:10px;flex-wrap:wrap}.row>*{flex:1;min-width:140px}
+.bar{height:12px;background:#2a2547;border-radius:6px;overflow:hidden}
+.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--acc2),var(--acc))}
+.stat{display:flex;align-items:center;gap:10px;margin:6px 0}.stat b{width:160px}.stat .bar{flex:1}
+.mute{color:var(--mute);font-size:.9em}
+.tag{display:inline-block;background:#352f58;border-radius:20px;padding:2px 10px;font-size:.8em;margin-right:4px}
+.note{border-left:3px solid var(--acc);padding-left:10px;margin:8px 0;white-space:pre-wrap;overflow:hidden}
+.note button{padding:2px 8px;margin-left:8px;font-size:.85em}
+.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:var(--acc);color:#000;padding:12px 20px;border-radius:10px;max-width:90%;z-index:9;white-space:pre-line}
+.block{border:2px solid var(--acc2);border-radius:16px;padding:14px 14px 0;margin-bottom:18px}
+.block h3{margin:0 0 12px;color:var(--acc);text-transform:uppercase;letter-spacing:.12em;font-size:1.2em}
+.block .card{background:#2a2547}
+@media(max-width:600px){
+  header{padding:14px 10px 10px}
+  input,select,textarea,button{font-size:16px} /* smaller text makes phones zoom in on focus */
+  button{padding:10px 14px}
+  .stat b{width:118px;font-size:.9em}
+  .block{padding:10px 10px 0}
+}
+button.wide{display:block;width:100%;padding:14px;font-size:1.1em;margin-bottom:14px}
+.popup{position:fixed;inset:0;z-index:8;background:var(--bg);overflow:auto;padding:20px max(14px,calc(50% - 436px)) 60px}
+.popup .close{position:fixed;top:14px;right:14px;width:40px;height:40px;padding:0;border-radius:50%;font-size:1.1em}
+.popup h2{margin:6px 50px 16px 0;color:var(--acc)}
+.suggest{position:relative}
+.suggest ul{position:absolute;top:100%;left:0;right:0;z-index:5;list-style:none;margin:-8px 0 0;padding:4px;background:#2a2547;border:1px solid #3d3766;border-radius:8px;box-shadow:0 8px 24px #0008;max-height:320px;overflow:auto}
+.suggest li{padding:6px 10px;border-radius:6px;cursor:pointer}
+.suggest li.on{background:var(--acc2)}.suggest li.on .mute{color:var(--ink)}
